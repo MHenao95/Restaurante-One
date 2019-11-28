@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+.contenedor{
+    width: 100%;
+    position: relative;
+    background-image: url('../images/img-1.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ header.cabecera{
+     width: inherit;
+     height: 80px;
+     background-color: rgba(255, 0, 0, 0.5);
+     position: static;
+     z-index: 100;
+ }
+ a.logo-pagina{
+     width: 60px;
+     height: 60px;
+     display: block;
+     float: left;
+     margin-left: 15%;
+     margin-top: 10px;
+     transition: all 200ms;
+ }
+
+ /*mwnu*/
+ ul.menu-principal{
+     width: auto;
+     height: auto;
+     float: right;
+     margin-right: 14%;
+     margin-top: 30px;
+     display: flex;
+ }
+ ul li{
+    list-style: none;
+    transition: all 300ms;
+    
+
+ }
+ ul li:hover{
+    transform: rotate(-15deg);
+    transition: all 300ms;
+
+ }
+
+ ul.menu-principal li a{
+     font-family: Arial, Helvetica, sans-serif;
+
+     text-transform: uppercase;
+     text-decoration: none;
+     color: white;
+     padding: 10px 25px;
+     text-align: center;
+     border-radius: 20px 0;
+     background-color: rgba(255, 255, 255, 0.2);
+     transition: all 300ms;
+     
+
+ }
+ ul.menu-principal li a:hover{
+    background: rgba(0, 0, 0, 0.5);
+    
+    
+}
+#check:checked ~ .menu-principal{
+    height: 100px;
+}
+
+/*main*/
+ main.pagina{
+     width: inherit;
+     height: auto;
+     position: relative;
+ }
+ #check{
+     display: none;
+ }
+
+ .icon-menu{
+     display: none;
+ }
+/*banner*/
+ section#banner{
+     widows: inherit;
+     height: 450px;
+     position: relative;
+ }
+ /*recetas*/
+ section.recetas{
+     widows: 100%;
+     height: auto;
+     margin: 0 auto;
+     padding: 50px;
+     position: relative;
+     background-color: rgba(0, 0, 0, 0.5);
+     border-top: dashed 2px rgb(255, 255, 255);
+ }
+
+ div.contenido-recetas{
+     width: 100%;
+     max-width: 920px;
+     height: auto;
+     margin: auto;
+     
+ }
+ div.itemsrecetas{
+     width: inherit;
+     height: auto;
+     display: flex;
+     padding: 20px;
+     
+ }
+ div.contenido-recetas h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: auto;
+ }
+ article.item-receta{
+     width: 250px;
+     height: auto;
+     text-align: center;
+     flex-direction: column;
+     margin-left: 20px;
+ }
+ 
+ article.item-receta img{
+    border-radius: 100%;
+    border: solid 5px rgba(255, 0, 0, 0.5);
+    width: 140px;
+    height: 140px;
+ }
+ article.item-receta h3{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: red;
+    padding: 10px;
+ }
+ article.item-receta h3,article.item-receta p{
+     color: white;
+     padding: 0 0 20px;
+     
+ }
+ .btn-recetas{
+     display: block;
+     padding: 5px 10px;
+     background-color: rgba(255, 0, 0, 0.9);
+     width: 150px;
+     margin: auto;
+     color: white;
+     border-radius: 20px 0;
+     text-decoration: none;
+     text-transform: uppercase;
+     
+ }
+
+ .btn-recetas:hover{
+    transform: rotate(-15deg);
+    transition: all 300ms;
+    
+ }
+/*nosotros*/
+
+section.nosotros{
+     width: inherit;
+     height: 500px;
+     background-color: rgba(255, 255, 255, 0.5);
+     border-top: dashed 2px rgb(255, 0, 0);
+}
+aside{
+    float: left;
+    width: 25%;
+    height: 500px;
+    background-color: rgba(255, 0, 0, 0.5);
+}
+section.nosotros section{
+    background: #ffffff;
+    width: 75%;
+    height: 500px;
+    float: right;
+    }
+/*contacto*/
+section.contacto{
+    width: inherit;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: dashed 2px rgb(255, 255, 255);
+}
+
+/*Pied de pagina*/
+ footer.pie-pagina{
+     clear: both;
+     width: inherit;
+     height: 250px;
+     background-color: rgba(255, 0, 0, 0.5);
+ }
+ div.cop-empresa{
+     width: inherit;
+     height: 20px;
+     background: black;
+
+ }
+
+ /*Tablet*/
+ @media screen and (max-width:900px){
+    /*cabecera*/
+    header.cabecera{
+        position: fixed;
+        
+    }
+    a.logo-pagina{
+        margin-left: 5px;
+    }
+
+    /*menu*/
+    .icon-menu{
+        display: block;
+        width: 30px;
+        height: 30px;
+        float:right;
+        margin-top: 15px;
+        margin-right: 15px;
+        background: #ffffff;
+
+    }
+    .icon-menu:hover{
+        cursor: pointer;
+    }
+    ul.menu-principal{
+        float: none;
+        flex-direction: column;
+        overflow: hidden;
+        width: 100%;
+        margin-right: none;
+        margin-top: 80px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    ul.menu-principal li{
+        transform: none;
+    }
+    ul.menu-principal li a{
+        width: 100%;
+        display: block;
+    }
+    
+    
+    /*main*/
+    main.pagina{
+     top: 80px;
+    }
+    /*banner*/
+    section#banner{
+        display: none;
+    }
+
+    /*recetas*/
+    section.recetas{
+        padding: 10px;
+    }
+    div.itemsrecetas{
+        display: block;
+    } 
+    /*nosotros*/
+    section.nosotros{
+        height: auto;
+    }
+    section.nosotros aside{
+        float: none;
+        width: 100%;
+        display: block;
+
+    }
+    section.nosotros section{
+        float: none;
+        width: 100%;
+        display: block;
+    }
+    
+    /*footer*/
+    footer.pie-pagina{
+        clear: none;
+    }
+ }
